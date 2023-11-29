@@ -2,10 +2,10 @@ import React from "react";
 import css from "./Header.module.css";
 import Logo from "../../assets/logo.png";
 import { CgShoppingBag } from "react-icons/cg";
-// import { GoThreeBars } from "react-icons/go";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
-    //left side nav
     <div className={css.container}>
       <div className={css.logo}>
         <img src={Logo} alt="" />
@@ -14,7 +14,6 @@ const Header = () => {
 
       <div className={css.right}>
         <div className={css.bars}>
-          {/* <GoThreeBars /> */}
         </div>
 
         <div className={css.menu}>
@@ -29,6 +28,7 @@ const Header = () => {
 
         <input type="text" className={css.search} placeholder="Search" />
         <CgShoppingBag className={css.cart} />
+        <Link to={"/"} className="px-6 py-1 rounded-3xl bg-yellow-250 font-bold border-2 border-green-400 hover:bg-green-400">Login</Link>
       </div>
     </div>
   );
